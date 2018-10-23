@@ -1,0 +1,30 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib", version: "2.0.0"
+
+	// This is needed when using the ConfigurableUtil class or @ExtendedObjectClassDefinition annotation
+
+	compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metatype.api", version: "1.0.0"		
+		
+	compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "3.0.1"
+
+	compileOnly group: "jstl", name: "jstl", version: "1.2"
+
+	compileOnly group: "org.osgi", name: "osgi.cmpn", version: "6.0.0"
+
+	// TODO: fix when dependencies are available
+
+	compileOnly files("../../../../bundles/tomcat-9.0.6/lib/ext/portlet.jar")
+	compileOnly files("../../../../bundles/tomcat-9.0.6/lib/ext/portal-kernel.jar")
+	
+	// Needed by the Application Display templates
+
+	compileOnly files("../../../../bundles/osgi/modules/com.liferay.dynamic.data.mapping.taglib.jar")
+	compileOnly files("../../../../bundles/osgi/modules/com.liferay.portlet.display.template.api.jar")
+
+	// Needed by the Clay tag library
+	
+	compileOnly files("../../../../bundles/osgi/modules/com.liferay.frontend.taglib.clay.jar")
+	compileOnly files("../../../../bundles/osgi/modules/com.liferay.asset.api.jar")	
+	
+	compile project(":solutions:solutions-chapter-06:solution-06-gradebook:solution-06-gradebook-api")
+}

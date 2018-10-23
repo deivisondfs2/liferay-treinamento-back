@@ -1,0 +1,9 @@
+Bundle-Name: gradebook-api
+Bundle-SymbolicName: gradebook.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	gradebook.exception,\
+	gradebook.model,\
+	gradebook.service,\
+	gradebook.service.persistence
+-includeresource: META-INF/service.xml=../gradebook-service/service.xml

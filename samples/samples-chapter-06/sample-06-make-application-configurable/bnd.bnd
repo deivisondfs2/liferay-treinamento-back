@@ -1,0 +1,6 @@
+Bundle-Name: make-application-configurable
+Bundle-SymbolicName: com.liferay.training.configuration
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.training.configuration.constants
+
+-metatype: *

@@ -1,0 +1,94 @@
+23-Oct-2018 12:02:07.025 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.6
+23-Oct-2018 12:02:07.027 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 09:34:35 UTC
+23-Oct-2018 12:02:07.027 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.6.0
+23-Oct-2018 12:02:07.028 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+23-Oct-2018 12:02:07.028 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-36-generic
+23-Oct-2018 12:02:07.028 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Oct-2018 12:02:07.028 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+23-Oct-2018 12:02:07.028 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_181-b13
+23-Oct-2018 12:02:07.029 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Oct-2018 12:02:07.029 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 12:02:07.029 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 12:02:07.030 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx1024m
+23-Oct-2018 12:02:07.030 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 12:02:07.030 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 12:02:07.031 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote
+23-Oct-2018 12:02:07.031 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.authenticate=false
+23-Oct-2018 12:02:07.031 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=8099
+23-Oct-2018 12:02:07.031 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
+23-Oct-2018 12:02:07.031 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF8
+23-Oct-2018 12:02:07.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/endorsed
+23-Oct-2018 12:02:07.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/temp
+23-Oct-2018 12:02:07.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.net.preferIPv4Stack=true
+23-Oct-2018 12:02:07.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/logging.properties
+23-Oct-2018 12:02:07.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Oct-2018 12:02:07.032 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+23-Oct-2018 12:02:07.033 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Duser.timezone=GMT
+23-Oct-2018 12:02:07.033 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+23-Oct-2018 12:02:07.314 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 12:02:07.346 INFORMAÇÕES [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+23-Oct-2018 12:02:07.368 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 12:02:07.372 INFORMAÇÕES [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+23-Oct-2018 12:02:07.372 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Initialization processed in 900 ms
+23-Oct-2018 12:02:07.426 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Oct-2018 12:02:07.426 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.6
+23-Oct-2018 12:02:07.438 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/Catalina/localhost/ROOT.xml]
+23-Oct-2018 12:02:07.476 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/Catalina/localhost/ROOT.xml] has been ignored
+23-Oct-2018 12:04:37.928 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/Catalina/localhost/ROOT.xml] has finished in [150,489] ms
+23-Oct-2018 12:04:37.932 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 12:04:37.944 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 12:04:37.951 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in 150578 ms
+23-Oct-2018 13:20:31.203 INFORMAÇÕES [Thread-35] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 13:20:31.256 INFORMAÇÕES [Thread-35] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 13:20:31.307 INFORMAÇÕES [Thread-35] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+23-Oct-2018 13:20:51.972 GRAVE [Thread-35] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@5d068685]) and a value of type [org.apache.logging.log4j.message.ReusableSimpleMessage] (value [org.apache.logging.log4j.message.ReusableSimpleMessage@376ddb22]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2018 13:20:52.003 GRAVE [Thread-35] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@25391733]) and a value of type [org.apache.logging.log4j.message.ReusableParameterizedMessage] (value [ReusableParameterizedMessage[messagePattern={}, stringArgs=[null], throwable=null]]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2018 13:20:52.007 GRAVE [Thread-35] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@6cc7fa1b]) and a value of type [org.apache.logging.log4j.core.pattern.DatePatternConverter.FixedFormatter] (value [org.apache.logging.log4j.core.pattern.DatePatternConverter$FixedFormatter@311c10d0]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2018 13:20:52.008 GRAVE [Thread-35] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@62d823ca]) and a value of type [io.netty.util.internal.InternalThreadLocalMap] (value [io.netty.util.internal.InternalThreadLocalMap@4ffc502]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2018 13:20:52.008 GRAVE [Thread-35] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@50fd876b]) and a value of type [org.apache.logging.log4j.core.impl.MutableLogEvent] (value [org.apache.logging.log4j.core.impl.MutableLogEvent@1b68734]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2018 13:20:52.016 INFORMAÇÕES [Thread-35] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 13:20:52.019 INFORMAÇÕES [Thread-35] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 13:20:52.021 INFORMAÇÕES [Thread-35] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 13:20:52.023 INFORMAÇÕES [Thread-35] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 13:48:11.332 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.6
+23-Oct-2018 13:48:11.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Mar 5 2018 09:34:35 UTC
+23-Oct-2018 13:48:11.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.6.0
+23-Oct-2018 13:48:11.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+23-Oct-2018 13:48:11.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-36-generic
+23-Oct-2018 13:48:11.333 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+23-Oct-2018 13:48:11.334 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+23-Oct-2018 13:48:11.334 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_181-b13
+23-Oct-2018 13:48:11.334 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Oct-2018 13:48:11.334 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 13:48:11.334 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 13:48:11.334 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx1024m
+23-Oct-2018 13:48:11.335 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 13:48:11.335 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6
+23-Oct-2018 13:48:11.335 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote
+23-Oct-2018 13:48:11.335 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.authenticate=false
+23-Oct-2018 13:48:11.335 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=8099
+23-Oct-2018 13:48:11.336 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
+23-Oct-2018 13:48:11.336 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF8
+23-Oct-2018 13:48:11.336 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/endorsed
+23-Oct-2018 13:48:11.336 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/temp
+23-Oct-2018 13:48:11.336 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.net.preferIPv4Stack=true
+23-Oct-2018 13:48:11.336 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/logging.properties
+23-Oct-2018 13:48:11.337 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Oct-2018 13:48:11.337 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+23-Oct-2018 13:48:11.337 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Duser.timezone=GMT
+23-Oct-2018 13:48:11.337 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+23-Oct-2018 13:48:11.445 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 13:48:11.454 INFORMAÇÕES [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+23-Oct-2018 13:48:11.462 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 13:48:11.463 INFORMAÇÕES [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+23-Oct-2018 13:48:11.464 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Initialization processed in 419 ms
+23-Oct-2018 13:48:11.488 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Oct-2018 13:48:11.489 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.6
+23-Oct-2018 13:48:11.497 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/Catalina/localhost/ROOT.xml]
+23-Oct-2018 13:48:11.518 ADVERTÊNCIA [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [] in deployment descriptor [/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/Catalina/localhost/ROOT.xml] has been ignored
+23-Oct-2018 13:50:10.322 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/tomcat-9.0.6/conf/Catalina/localhost/ROOT.xml] has finished in [118,826] ms
+23-Oct-2018 13:50:10.325 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Oct-2018 13:50:10.337 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+23-Oct-2018 13:50:10.344 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in 118879 ms
+23-Oct-2018 14:13:36.592 GRAVE [http-nio-8080-exec-3] org.apache.jasper.compiler.Compiler.generateClass Error compiling file: /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/work/com.liferay.training.portlet.portletmodule-1.0.0/org/apache/jsp/view_jsp.java
+23-Oct-2018 14:14:56.102 GRAVE [http-nio-8080-exec-3] org.apache.jasper.compiler.Compiler.generateClass Error compiling file: /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/work/com.liferay.training.portlet.portletmodule-1.0.0/org/apache/jsp/view_jsp.java

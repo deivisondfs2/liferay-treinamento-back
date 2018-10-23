@@ -1,0 +1,20 @@
+dependencies {
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.1.0"
+	compileOnly group: "com.liferay", name: "com.liferay.osgi.util", version: "3.0.0"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender", version: "2.0.0"
+	
+	compile group: "javax.servlet", name: "servlet-api", version: "2.5"
+
+	// TODO: fix when dependencies are available
+
+	compileOnly files("../../../../bundles/tomcat-9.0.6/lib/ext/portlet.jar")
+	compileOnly files("../../../../bundles/tomcat-9.0.6/lib/ext/portal-kernel.jar")
+
+	compile project(":solutions:solutions-chapter-06:solution-06-gradebook:solution-06-gradebook-api")
+}
+
+buildService {
+	apiDir = "../solution-06-gradebook-api/src/main/java"
+}
+
+group = "com.liferay.training.gradebook"

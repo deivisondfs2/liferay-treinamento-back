@@ -1,0 +1,6 @@
+dependencies {
+	// TODO: replace with correct dependency
+	compileOnly files("../../../bundles/tomcat-9.0.6/lib/ext/portal-kernel.jar")
+
+	compileOnly group: "org.osgi", name: "osgi.cmpn", version: "6.0.0"
+}
