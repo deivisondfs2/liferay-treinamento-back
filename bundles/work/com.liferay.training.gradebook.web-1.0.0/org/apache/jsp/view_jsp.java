@@ -3,6 +3,15 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.Date;
+import javax.portlet.WindowState;
+import com.liferay.portal.kernel.language.LanguageUtil;
+import com.liferay.asset.kernel.model.AssetRenderer;
+import com.liferay.portal.kernel.util.HtmlUtil;
+import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.training.gradebook.model.Assignment;
+import com.liferay.training.gradebook.web.constants.MVCCommandNames;
+import com.liferay.training.gradebook.web.constants.MVCCommandNames;
 
 public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -12,19 +21,43 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(7);
+    _jspx_dependants = new java.util.ArrayList<String>(2);
     _jspx_dependants.add("/init.jsp");
-    _jspx_dependants.add("/META-INF/c.tld");
-    _jspx_dependants.add("/META-INF/liferay-portlet_2_0.tld");
-    _jspx_dependants.add("/META-INF/liferay-aui.tld");
-    _jspx_dependants.add("/META-INF/liferay-portlet-ext.tld");
-    _jspx_dependants.add("/META-INF/liferay-theme.tld");
-    _jspx_dependants.add("/META-INF/liferay-ui.tld");
+    _jspx_dependants.add("/assignment/entry_search_columns.jspf");
   }
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_message_key_arguments_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1text_value_name_href_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_portlet_param_value_name_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_name_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_aui_a_href;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_showDetails_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_user$1portrait_userId_cssClass_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1row_modelVar_className;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1frontend_icon$1vertical$1card_url_title_resultRow_icon_actionJspServletContext_actionJsp;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_choose;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1frontend_defineObjects_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_name_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_success_message_key_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_when_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_message_key_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1theme_defineObjects_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container_total_iteratorURL_id_emptyResultsMessage;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1results_results_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1status_name_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_portlet_renderURL_var;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1text_colspan;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_otherwise;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1frontend_vertical$1card$1sticker$1bottom;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_portlet_defineObjects_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ddm_template$1renderer_entries_displayStyleGroupId_displayStyle_className;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1theme_defineObjects_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1text;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1container$1column$1date_property_name_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_clay_management$1toolbar_viewTypeItems_sortingURL_sortingOrder_showInfoButton_selectable_searchFormName_searchContainerId_searchActionURL_itemsTotal_filterDropdownItems_disabled_creationMenu_componentId_clearResultsURL_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1frontend_vertical$1card$1footer;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_liferay$1ui_search$1iterator_markupView_displayStyle_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -33,15 +66,73 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
+    _jspx_tagPool_liferay$1ui_message_key_arguments_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1text_value_name_href_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_portlet_param_value_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_aui_a_href = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_showDetails_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_user$1portrait_userId_cssClass_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1row_modelVar_className = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1frontend_icon$1vertical$1card_url_title_resultRow_icon_actionJspServletContext_actionJsp = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_choose = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1frontend_defineObjects_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_success_message_key_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_when_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_liferay$1ui_message_key_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_liferay$1theme_defineObjects_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container_total_iteratorURL_id_emptyResultsMessage = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1results_results_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1status_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_portlet_renderURL_var = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1text_colspan = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_otherwise = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1frontend_vertical$1card$1sticker$1bottom = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_portlet_defineObjects_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ddm_template$1renderer_entries_displayStyleGroupId_displayStyle_className = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1theme_defineObjects_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1text = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1date_property_name_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_clay_management$1toolbar_viewTypeItems_sortingURL_sortingOrder_showInfoButton_selectable_searchFormName_searchContainerId_searchActionURL_itemsTotal_filterDropdownItems_disabled_creationMenu_componentId_clearResultsURL_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1frontend_vertical$1card$1footer = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_liferay$1ui_search$1iterator_markupView_displayStyle_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
+    _jspx_tagPool_liferay$1ui_message_key_arguments_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1text_value_name_href_nobody.release();
+    _jspx_tagPool_portlet_param_value_name_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_name_nobody.release();
+    _jspx_tagPool_aui_a_href.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_showDetails_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_nobody.release();
+    _jspx_tagPool_liferay$1ui_user$1portrait_userId_cssClass_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1row_modelVar_className.release();
+    _jspx_tagPool_liferay$1frontend_icon$1vertical$1card_url_title_resultRow_icon_actionJspServletContext_actionJsp.release();
+    _jspx_tagPool_c_choose.release();
+    _jspx_tagPool_liferay$1frontend_defineObjects_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_name_nobody.release();
+    _jspx_tagPool_liferay$1ui_success_message_key_nobody.release();
+    _jspx_tagPool_c_when_test.release();
     _jspx_tagPool_liferay$1ui_message_key_nobody.release();
-    _jspx_tagPool_liferay$1theme_defineObjects_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container_total_iteratorURL_id_emptyResultsMessage.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1results_results_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1status_name_nobody.release();
+    _jspx_tagPool_portlet_renderURL_var.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1text_colspan.release();
+    _jspx_tagPool_c_otherwise.release();
+    _jspx_tagPool_liferay$1frontend_vertical$1card$1sticker$1bottom.release();
     _jspx_tagPool_portlet_defineObjects_nobody.release();
+    _jspx_tagPool_liferay$1ddm_template$1renderer_entries_displayStyleGroupId_displayStyle_className.release();
+    _jspx_tagPool_liferay$1theme_defineObjects_nobody.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1text.release();
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1date_property_name_nobody.release();
+    _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.release();
+    _jspx_tagPool_clay_management$1toolbar_viewTypeItems_sortingURL_sortingOrder_showInfoButton_selectable_searchFormName_searchContainerId_searchActionURL_itemsTotal_filterDropdownItems_disabled_creationMenu_componentId_clearResultsURL_nobody.release();
+    _jspx_tagPool_liferay$1frontend_vertical$1card$1footer.release();
+    _jspx_tagPool_liferay$1ui_search$1iterator_markupView_displayStyle_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -69,11 +160,56 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\n");
+      out.write(" \n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      //  liferay-frontend:defineObjects
+      com.liferay.frontend.taglib.servlet.taglib.DefineObjectsTag _jspx_th_liferay$1frontend_defineObjects_0 = (com.liferay.frontend.taglib.servlet.taglib.DefineObjectsTag) _jspx_tagPool_liferay$1frontend_defineObjects_nobody.get(com.liferay.frontend.taglib.servlet.taglib.DefineObjectsTag.class);
+      _jspx_th_liferay$1frontend_defineObjects_0.setPageContext(_jspx_page_context);
+      _jspx_th_liferay$1frontend_defineObjects_0.setParent(null);
+      int _jspx_eval_liferay$1frontend_defineObjects_0 = _jspx_th_liferay$1frontend_defineObjects_0.doStartTag();
+      if (_jspx_th_liferay$1frontend_defineObjects_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        _jspx_tagPool_liferay$1frontend_defineObjects_nobody.reuse(_jspx_th_liferay$1frontend_defineObjects_0);
+        return;
+      }
+      _jspx_tagPool_liferay$1frontend_defineObjects_nobody.reuse(_jspx_th_liferay$1frontend_defineObjects_0);
+      java.lang.String currentURL = null;
+      javax.portlet.PortletURL currentURLObj = null;
+      java.util.ResourceBundle resourceBundle = null;
+      javax.portlet.WindowState windowState = null;
+      currentURL = (java.lang.String) _jspx_page_context.findAttribute("currentURL");
+      currentURLObj = (javax.portlet.PortletURL) _jspx_page_context.findAttribute("currentURLObj");
+      resourceBundle = (java.util.ResourceBundle) _jspx_page_context.findAttribute("resourceBundle");
+      windowState = (javax.portlet.WindowState) _jspx_page_context.findAttribute("windowState");
+      out.write('\n');
+      out.write('\n');
       //  liferay-theme:defineObjects
       com.liferay.taglib.theme.DefineObjectsTag _jspx_th_liferay$1theme_defineObjects_0 = (com.liferay.taglib.theme.DefineObjectsTag) _jspx_tagPool_liferay$1theme_defineObjects_nobody.get(com.liferay.taglib.theme.DefineObjectsTag.class);
       _jspx_th_liferay$1theme_defineObjects_0.setPageContext(_jspx_page_context);
@@ -84,10 +220,46 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       }
       _jspx_tagPool_liferay$1theme_defineObjects_nobody.reuse(_jspx_th_liferay$1theme_defineObjects_0);
+      com.liferay.portal.kernel.theme.ThemeDisplay themeDisplay = null;
+      com.liferay.portal.kernel.model.Company company = null;
+      com.liferay.portal.kernel.model.Account account = null;
+      com.liferay.portal.kernel.model.User user = null;
+      com.liferay.portal.kernel.model.User realUser = null;
+      com.liferay.portal.kernel.model.Contact contact = null;
+      com.liferay.portal.kernel.model.Layout layout = null;
+      java.util.List layouts = null;
+      java.lang.Long plid = null;
+      com.liferay.portal.kernel.model.LayoutTypePortlet layoutTypePortlet = null;
+      java.lang.Long scopeGroupId = null;
+      com.liferay.portal.kernel.security.permission.PermissionChecker permissionChecker = null;
+      java.util.Locale locale = null;
+      java.util.TimeZone timeZone = null;
+      com.liferay.portal.kernel.model.Theme theme = null;
+      com.liferay.portal.kernel.model.ColorScheme colorScheme = null;
+      com.liferay.portal.kernel.theme.PortletDisplay portletDisplay = null;
+      java.lang.Long portletGroupId = null;
+      themeDisplay = (com.liferay.portal.kernel.theme.ThemeDisplay) _jspx_page_context.findAttribute("themeDisplay");
+      company = (com.liferay.portal.kernel.model.Company) _jspx_page_context.findAttribute("company");
+      account = (com.liferay.portal.kernel.model.Account) _jspx_page_context.findAttribute("account");
+      user = (com.liferay.portal.kernel.model.User) _jspx_page_context.findAttribute("user");
+      realUser = (com.liferay.portal.kernel.model.User) _jspx_page_context.findAttribute("realUser");
+      contact = (com.liferay.portal.kernel.model.Contact) _jspx_page_context.findAttribute("contact");
+      layout = (com.liferay.portal.kernel.model.Layout) _jspx_page_context.findAttribute("layout");
+      layouts = (java.util.List) _jspx_page_context.findAttribute("layouts");
+      plid = (java.lang.Long) _jspx_page_context.findAttribute("plid");
+      layoutTypePortlet = (com.liferay.portal.kernel.model.LayoutTypePortlet) _jspx_page_context.findAttribute("layoutTypePortlet");
+      scopeGroupId = (java.lang.Long) _jspx_page_context.findAttribute("scopeGroupId");
+      permissionChecker = (com.liferay.portal.kernel.security.permission.PermissionChecker) _jspx_page_context.findAttribute("permissionChecker");
+      locale = (java.util.Locale) _jspx_page_context.findAttribute("locale");
+      timeZone = (java.util.TimeZone) _jspx_page_context.findAttribute("timeZone");
+      theme = (com.liferay.portal.kernel.model.Theme) _jspx_page_context.findAttribute("theme");
+      colorScheme = (com.liferay.portal.kernel.model.ColorScheme) _jspx_page_context.findAttribute("colorScheme");
+      portletDisplay = (com.liferay.portal.kernel.theme.PortletDisplay) _jspx_page_context.findAttribute("portletDisplay");
+      portletGroupId = (java.lang.Long) _jspx_page_context.findAttribute("portletGroupId");
       out.write('\n');
       out.write('\n');
       //  portlet:defineObjects
-      com.liferay.taglib.portlet.DefineObjectsTag _jspx_th_portlet_defineObjects_0 = (com.liferay.taglib.portlet.DefineObjectsTag) _jspx_tagPool_portlet_defineObjects_nobody.get(com.liferay.taglib.portlet.DefineObjectsTag.class);
+      com.liferay.taglib.portlet.DefineObjectsTag3 _jspx_th_portlet_defineObjects_0 = (com.liferay.taglib.portlet.DefineObjectsTag3) _jspx_tagPool_portlet_defineObjects_nobody.get(com.liferay.taglib.portlet.DefineObjectsTag3.class);
       _jspx_th_portlet_defineObjects_0.setPageContext(_jspx_page_context);
       _jspx_th_portlet_defineObjects_0.setParent(null);
       int _jspx_eval_portlet_defineObjects_0 = _jspx_th_portlet_defineObjects_0.doStartTag();
@@ -96,20 +268,584 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       }
       _jspx_tagPool_portlet_defineObjects_nobody.reuse(_jspx_th_portlet_defineObjects_0);
+      javax.portlet.ActionParameters actionParams = null;
+      javax.portlet.ActionRequest actionRequest = null;
+      javax.portlet.ActionResponse actionResponse = null;
+      javax.portlet.ClientDataRequest clientDataRequest = null;
+      java.lang.String contextPath = null;
+      javax.servlet.http.Cookie[] cookies = null;
+      javax.portlet.EventRequest eventRequest = null;
+      javax.portlet.EventResponse eventResponse = null;
+      javax.portlet.HeaderRequest headerRequest = null;
+      javax.portlet.HeaderResponse headerResponse = null;
+      com.liferay.portal.kernel.portlet.LiferayPortletRequest liferayPortletRequest = null;
+      com.liferay.portal.kernel.portlet.LiferayPortletResponse liferayPortletResponse = null;
+      java.util.Locale[] locales = null;
+      javax.portlet.MimeResponse mimeResponse = null;
+      javax.portlet.MutableRenderParameters mutableRenderParams = null;
+      java.lang.String namespace = null;
+      javax.portlet.PortletConfig portletConfig = null;
+      javax.portlet.PortletContext portletContext = null;
+      javax.portlet.PortletMode portletMode = null;
+      java.lang.String portletName = null;
+      javax.portlet.PortletPreferences portletPreferences = null;
+      java.util.Map portletPreferencesValues = null;
+      javax.portlet.PortletRequest portletRequest = null;
+      javax.portlet.PortletResponse portletResponse = null;
+      javax.portlet.PortletSession portletSession = null;
+      java.util.Map portletSessionScope = null;
+      javax.portlet.RenderParameters renderParams = null;
+      javax.portlet.RenderRequest renderRequest = null;
+      javax.portlet.RenderResponse renderResponse = null;
+      javax.portlet.ResourceRequest resourceRequest = null;
+      javax.portlet.ResourceResponse resourceResponse = null;
+      javax.portlet.ResourceParameters resourceParams = null;
+      javax.portlet.StateAwareResponse stateAwareResponse = null;
+      java.lang.String windowId = null;
+      actionParams = (javax.portlet.ActionParameters) _jspx_page_context.findAttribute("actionParams");
+      actionRequest = (javax.portlet.ActionRequest) _jspx_page_context.findAttribute("actionRequest");
+      actionResponse = (javax.portlet.ActionResponse) _jspx_page_context.findAttribute("actionResponse");
+      clientDataRequest = (javax.portlet.ClientDataRequest) _jspx_page_context.findAttribute("clientDataRequest");
+      contextPath = (java.lang.String) _jspx_page_context.findAttribute("contextPath");
+      cookies = (javax.servlet.http.Cookie[]) _jspx_page_context.findAttribute("cookies");
+      eventRequest = (javax.portlet.EventRequest) _jspx_page_context.findAttribute("eventRequest");
+      eventResponse = (javax.portlet.EventResponse) _jspx_page_context.findAttribute("eventResponse");
+      headerRequest = (javax.portlet.HeaderRequest) _jspx_page_context.findAttribute("headerRequest");
+      headerResponse = (javax.portlet.HeaderResponse) _jspx_page_context.findAttribute("headerResponse");
+      liferayPortletRequest = (com.liferay.portal.kernel.portlet.LiferayPortletRequest) _jspx_page_context.findAttribute("liferayPortletRequest");
+      liferayPortletResponse = (com.liferay.portal.kernel.portlet.LiferayPortletResponse) _jspx_page_context.findAttribute("liferayPortletResponse");
+      locale = (java.util.Locale) _jspx_page_context.findAttribute("locale");
+      locales = (java.util.Locale[]) _jspx_page_context.findAttribute("locales");
+      mimeResponse = (javax.portlet.MimeResponse) _jspx_page_context.findAttribute("mimeResponse");
+      mutableRenderParams = (javax.portlet.MutableRenderParameters) _jspx_page_context.findAttribute("mutableRenderParams");
+      namespace = (java.lang.String) _jspx_page_context.findAttribute("namespace");
+      portletConfig = (javax.portlet.PortletConfig) _jspx_page_context.findAttribute("portletConfig");
+      portletContext = (javax.portlet.PortletContext) _jspx_page_context.findAttribute("portletContext");
+      portletMode = (javax.portlet.PortletMode) _jspx_page_context.findAttribute("portletMode");
+      portletName = (java.lang.String) _jspx_page_context.findAttribute("portletName");
+      portletPreferences = (javax.portlet.PortletPreferences) _jspx_page_context.findAttribute("portletPreferences");
+      portletPreferencesValues = (java.util.Map) _jspx_page_context.findAttribute("portletPreferencesValues");
+      portletRequest = (javax.portlet.PortletRequest) _jspx_page_context.findAttribute("portletRequest");
+      portletResponse = (javax.portlet.PortletResponse) _jspx_page_context.findAttribute("portletResponse");
+      portletSession = (javax.portlet.PortletSession) _jspx_page_context.findAttribute("portletSession");
+      portletSessionScope = (java.util.Map) _jspx_page_context.findAttribute("portletSessionScope");
+      renderParams = (javax.portlet.RenderParameters) _jspx_page_context.findAttribute("renderParams");
+      renderRequest = (javax.portlet.RenderRequest) _jspx_page_context.findAttribute("renderRequest");
+      renderResponse = (javax.portlet.RenderResponse) _jspx_page_context.findAttribute("renderResponse");
+      resourceRequest = (javax.portlet.ResourceRequest) _jspx_page_context.findAttribute("resourceRequest");
+      resourceResponse = (javax.portlet.ResourceResponse) _jspx_page_context.findAttribute("resourceResponse");
+      resourceParams = (javax.portlet.ResourceParameters) _jspx_page_context.findAttribute("resourceParams");
+      stateAwareResponse = (javax.portlet.StateAwareResponse) _jspx_page_context.findAttribute("stateAwareResponse");
+      windowId = (java.lang.String) _jspx_page_context.findAttribute("windowId");
+      windowState = (javax.portlet.WindowState) _jspx_page_context.findAttribute("windowState");
+      out.write('\n');
       out.write("\n");
       out.write("\n");
-      out.write("<p>\n");
-      out.write("\t<b>");
-      if (_jspx_meth_liferay$1ui_message_0(_jspx_page_context))
+      out.write("\n");
+      out.write('\n');
+      out.write('\n');
+      out.write('\n');
+      out.write('\n');
+      if (_jspx_meth_liferay$1ui_success_0(_jspx_page_context))
         return;
-      out.write("</b>\n");
-      out.write("\t\n");
-      out.write("</p>\n");
-      out.write("<p>\n");
+      out.write('\n');
+      out.write('\n');
+      out.write('\n');
+      out.write('\n');
+      if (_jspx_meth_liferay$1ui_success_1(_jspx_page_context))
+        return;
+      out.write('\n');
+      out.write('\n');
+      if (_jspx_meth_liferay$1ui_success_2(_jspx_page_context))
+        return;
+      out.write('\n');
+      out.write('\n');
       out.write("\n");
-      out.write("hellooo\n");
       out.write("\n");
-      out.write("</p>");
+      out.write("\n");
+      //  liferay-ddm:template-renderer
+      com.liferay.dynamic.data.mapping.taglib.servlet.taglib.TemplateRendererTag _jspx_th_liferay$1ddm_template$1renderer_0 = (com.liferay.dynamic.data.mapping.taglib.servlet.taglib.TemplateRendererTag) _jspx_tagPool_liferay$1ddm_template$1renderer_entries_displayStyleGroupId_displayStyle_className.get(com.liferay.dynamic.data.mapping.taglib.servlet.taglib.TemplateRendererTag.class);
+      _jspx_th_liferay$1ddm_template$1renderer_0.setPageContext(_jspx_page_context);
+      _jspx_th_liferay$1ddm_template$1renderer_0.setParent(null);
+      _jspx_th_liferay$1ddm_template$1renderer_0.setClassName((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentClassName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      _jspx_th_liferay$1ddm_template$1renderer_0.setDisplayStyle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ADTdisplayStyle}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      _jspx_th_liferay$1ddm_template$1renderer_0.setDisplayStyleGroupId(((java.lang.Long) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ADTdisplayStyleGroupId}", long.class, (PageContext)_jspx_page_context, null)).longValue());
+      _jspx_th_liferay$1ddm_template$1renderer_0.setEntries((java.util.List) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignments}", java.util.List.class, (PageContext)_jspx_page_context, null));
+      int _jspx_eval_liferay$1ddm_template$1renderer_0 = _jspx_th_liferay$1ddm_template$1renderer_0.doStartTag();
+      if (_jspx_eval_liferay$1ddm_template$1renderer_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        out.write("\n");
+        out.write("\n");
+        out.write("\t<div class=\"container-fluid-1280\">\n");
+        out.write("\t\n");
+        out.write("\t\t<h1>");
+        if (_jspx_meth_liferay$1ui_message_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ddm_template$1renderer_0, _jspx_page_context))
+          return;
+        out.write("</h1>\n");
+        out.write("\t\t\n");
+        out.write("\t\t");
+        out.write("\n");
+        out.write("\t\t\n");
+        out.write("\t\t");
+        if (_jspx_meth_clay_management$1toolbar_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ddm_template$1renderer_0, _jspx_page_context))
+          return;
+        out.write("\n");
+        out.write("\t\n");
+        out.write("\t\t");
+        out.write("\n");
+        out.write("\t\n");
+        out.write("\t\t");
+        //  liferay-ui:search-container
+        com.liferay.taglib.ui.SearchContainerTag _jspx_th_liferay$1ui_search$1container_0 = (com.liferay.taglib.ui.SearchContainerTag) _jspx_tagPool_liferay$1ui_search$1container_total_iteratorURL_id_emptyResultsMessage.get(com.liferay.taglib.ui.SearchContainerTag.class);
+        _jspx_th_liferay$1ui_search$1container_0.setPageContext(_jspx_page_context);
+        _jspx_th_liferay$1ui_search$1container_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ddm_template$1renderer_0);
+        _jspx_th_liferay$1ui_search$1container_0.setEmptyResultsMessage("no-assignments");
+        _jspx_th_liferay$1ui_search$1container_0.setId("assignmentEntries");
+        _jspx_th_liferay$1ui_search$1container_0.setIteratorURL((javax.portlet.PortletURL) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${portletURL}", javax.portlet.PortletURL.class, (PageContext)_jspx_page_context, null));
+        _jspx_th_liferay$1ui_search$1container_0.setTotal(((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentCount}", int.class, (PageContext)_jspx_page_context, null)).intValue());
+        int _jspx_eval_liferay$1ui_search$1container_0 = _jspx_th_liferay$1ui_search$1container_0.doStartTag();
+        if (_jspx_eval_liferay$1ui_search$1container_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+          java.lang.Integer total = null;
+          com.liferay.portal.kernel.dao.search.SearchContainer searchContainer = null;
+          total = (java.lang.Integer) _jspx_page_context.findAttribute("total");
+          searchContainer = (com.liferay.portal.kernel.dao.search.SearchContainer) _jspx_page_context.findAttribute("searchContainer");
+          out.write("\n");
+          out.write("\n");
+          out.write("\t\t\t");
+          //  liferay-ui:search-container-results
+          java.util.List results = null;
+          java.lang.Integer deprecatedTotal = null;
+          com.liferay.taglib.ui.SearchContainerResultsTag _jspx_th_liferay$1ui_search$1container$1results_0 = (com.liferay.taglib.ui.SearchContainerResultsTag) _jspx_tagPool_liferay$1ui_search$1container$1results_results_nobody.get(com.liferay.taglib.ui.SearchContainerResultsTag.class);
+          _jspx_th_liferay$1ui_search$1container$1results_0.setPageContext(_jspx_page_context);
+          _jspx_th_liferay$1ui_search$1container$1results_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container_0);
+          _jspx_th_liferay$1ui_search$1container$1results_0.setResults((java.util.List) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignments}", java.util.List.class, (PageContext)_jspx_page_context, null));
+          int _jspx_eval_liferay$1ui_search$1container$1results_0 = _jspx_th_liferay$1ui_search$1container$1results_0.doStartTag();
+          results = (java.util.List) _jspx_page_context.findAttribute("results");
+          deprecatedTotal = (java.lang.Integer) _jspx_page_context.findAttribute("deprecatedTotal");
+          if (_jspx_th_liferay$1ui_search$1container$1results_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+            _jspx_tagPool_liferay$1ui_search$1container$1results_results_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1results_0);
+            return;
+          }
+          results = (java.util.List) _jspx_page_context.findAttribute("results");
+          deprecatedTotal = (java.lang.Integer) _jspx_page_context.findAttribute("deprecatedTotal");
+          _jspx_tagPool_liferay$1ui_search$1container$1results_results_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1results_0);
+          out.write("\n");
+          out.write("\n");
+          out.write("\t\t\t");
+          //  liferay-ui:search-container-row
+          com.liferay.taglib.ui.SearchContainerRowTag _jspx_th_liferay$1ui_search$1container$1row_0 = (com.liferay.taglib.ui.SearchContainerRowTag) _jspx_tagPool_liferay$1ui_search$1container$1row_modelVar_className.get(com.liferay.taglib.ui.SearchContainerRowTag.class);
+          _jspx_th_liferay$1ui_search$1container$1row_0.setPageContext(_jspx_page_context);
+          _jspx_th_liferay$1ui_search$1container$1row_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container_0);
+          _jspx_th_liferay$1ui_search$1container$1row_0.setClassName("com.liferay.training.gradebook.model.Assignment");
+          _jspx_th_liferay$1ui_search$1container$1row_0.setModelVar("entry");
+          int _jspx_eval_liferay$1ui_search$1container$1row_0 = _jspx_th_liferay$1ui_search$1container$1row_0.doStartTag();
+          if (_jspx_eval_liferay$1ui_search$1container$1row_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+            java.lang.Integer index = null;
+            com.liferay.training.gradebook.model.Assignment entry = null;
+            com.liferay.portal.kernel.dao.search.ResultRow row = null;
+            if (_jspx_eval_liferay$1ui_search$1container$1row_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+              out = _jspx_page_context.pushBody();
+              _jspx_th_liferay$1ui_search$1container$1row_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+              _jspx_th_liferay$1ui_search$1container$1row_0.doInitBody();
+            }
+            index = (java.lang.Integer) _jspx_page_context.findAttribute("index");
+            entry = (com.liferay.training.gradebook.model.Assignment) _jspx_page_context.findAttribute("entry");
+            row = (com.liferay.portal.kernel.dao.search.ResultRow) _jspx_page_context.findAttribute("row");
+            do {
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t\t\t");
+              out.write('\n');
+              out.write('\n');
+              out.write("\n");
+              out.write("\n");
+              out.write("\n");
+              //  portlet:renderURL
+              com.liferay.taglib.portlet.RenderURLTag _jspx_th_portlet_renderURL_0 = (com.liferay.taglib.portlet.RenderURLTag) _jspx_tagPool_portlet_renderURL_var.get(com.liferay.taglib.portlet.RenderURLTag.class);
+              _jspx_th_portlet_renderURL_0.setPageContext(_jspx_page_context);
+              _jspx_th_portlet_renderURL_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+              _jspx_th_portlet_renderURL_0.setVar("viewSubmissionsURL");
+              int _jspx_eval_portlet_renderURL_0 = _jspx_th_portlet_renderURL_0.doStartTag();
+              if (_jspx_eval_portlet_renderURL_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+                out.write("\n");
+                out.write("\n");
+                out.write("\t");
+                //  portlet:param
+                com.liferay.taglib.util.ParamTag _jspx_th_portlet_param_0 = (com.liferay.taglib.util.ParamTag) _jspx_tagPool_portlet_param_value_name_nobody.get(com.liferay.taglib.util.ParamTag.class);
+                _jspx_th_portlet_param_0.setPageContext(_jspx_page_context);
+                _jspx_th_portlet_param_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_portlet_renderURL_0);
+                _jspx_th_portlet_param_0.setName("mvcRenderCommandName");
+                _jspx_th_portlet_param_0.setValue( MVCCommandNames.VIEW_SUBMISSIONS );
+                int _jspx_eval_portlet_param_0 = _jspx_th_portlet_param_0.doStartTag();
+                if (_jspx_th_portlet_param_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                  _jspx_tagPool_portlet_param_value_name_nobody.reuse(_jspx_th_portlet_param_0);
+                  return;
+                }
+                _jspx_tagPool_portlet_param_value_name_nobody.reuse(_jspx_th_portlet_param_0);
+                out.write('\n');
+                out.write('	');
+                if (_jspx_meth_portlet_param_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_portlet_renderURL_0, _jspx_page_context))
+                  return;
+                out.write('\n');
+                out.write('	');
+                if (_jspx_meth_portlet_param_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_portlet_renderURL_0, _jspx_page_context))
+                  return;
+                out.write('\n');
+                out.write('\n');
+              }
+              if (_jspx_th_portlet_renderURL_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                _jspx_tagPool_portlet_renderURL_var.reuse(_jspx_th_portlet_renderURL_0);
+                return;
+              }
+              _jspx_tagPool_portlet_renderURL_var.reuse(_jspx_th_portlet_renderURL_0);
+              java.lang.String viewSubmissionsURL = null;
+              viewSubmissionsURL = (java.lang.String) _jspx_page_context.findAttribute("viewSubmissionsURL");
+              out.write('\n');
+              out.write('\n');
+              out.write('\n');
+              out.write('\n');
+              out.write("\n");
+              out.write("\n");
+              out.write("\t");
+              out.write("\n");
+              out.write("\n");
+              out.write("\t");
+if (
+((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getDisplayStyle().equals(\"descriptive\")}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue()) {
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              //  liferay-ui:search-container-column-user
+              com.liferay.taglib.ui.SearchContainerColumnUserTag _jspx_th_liferay$1ui_search$1container$1column$1user_0 = (com.liferay.taglib.ui.SearchContainerColumnUserTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_showDetails_nobody.get(com.liferay.taglib.ui.SearchContainerColumnUserTag.class);
+              _jspx_th_liferay$1ui_search$1container$1column$1user_0.setPageContext(_jspx_page_context);
+              _jspx_th_liferay$1ui_search$1container$1column$1user_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+              _jspx_th_liferay$1ui_search$1container$1column$1user_0.setShowDetails(false);
+              _jspx_th_liferay$1ui_search$1container$1column$1user_0.setUserId(entry.getUserId());
+              int _jspx_eval_liferay$1ui_search$1container$1column$1user_0 = _jspx_th_liferay$1ui_search$1container$1column$1user_0.doStartTag();
+              if (_jspx_th_liferay$1ui_search$1container$1column$1user_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_showDetails_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1user_0);
+                return;
+              }
+              _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_showDetails_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1user_0);
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              //  liferay-ui:search-container-column-text
+              com.liferay.taglib.ui.SearchContainerColumnTextTag _jspx_th_liferay$1ui_search$1container$1column$1text_0 = (com.liferay.taglib.ui.SearchContainerColumnTextTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1text_colspan.get(com.liferay.taglib.ui.SearchContainerColumnTextTag.class);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_0.setPageContext(_jspx_page_context);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_0.setColspan(2);
+              int _jspx_eval_liferay$1ui_search$1container$1column$1text_0 = _jspx_th_liferay$1ui_search$1container$1column$1text_0.doStartTag();
+              if (_jspx_eval_liferay$1ui_search$1container$1column$1text_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+                if (_jspx_eval_liferay$1ui_search$1container$1column$1text_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+                  out = _jspx_page_context.pushBody();
+                  _jspx_th_liferay$1ui_search$1container$1column$1text_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+                  _jspx_th_liferay$1ui_search$1container$1column$1text_0.doInitBody();
+                }
+                do {
+                  out.write("\n");
+                  out.write("\n");
+                  out.write("\t\t\t");
+
+				String modifiedDateDescription =
+					LanguageUtil.getTimeDescription(
+							request, System.currentTimeMillis() 
+							- entry.getModifiedDate().getTime(), true);
+			
+                  out.write("\n");
+                  out.write("\n");
+                  out.write("\t\t\t<h5 class=\"text-default\">\n");
+                  out.write("\t\t\t\t");
+                  //  liferay-ui:message
+                  com.liferay.taglib.ui.MessageTag _jspx_th_liferay$1ui_message_1 = (com.liferay.taglib.ui.MessageTag) _jspx_tagPool_liferay$1ui_message_key_arguments_nobody.get(com.liferay.taglib.ui.MessageTag.class);
+                  _jspx_th_liferay$1ui_message_1.setPageContext(_jspx_page_context);
+                  _jspx_th_liferay$1ui_message_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1column$1text_0);
+                  _jspx_th_liferay$1ui_message_1.setArguments(new String[] {entry.getUserName(), modifiedDateDescription});
+                  _jspx_th_liferay$1ui_message_1.setKey("x-modified-x-ago");
+                  int _jspx_eval_liferay$1ui_message_1 = _jspx_th_liferay$1ui_message_1.doStartTag();
+                  if (_jspx_th_liferay$1ui_message_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                    _jspx_tagPool_liferay$1ui_message_key_arguments_nobody.reuse(_jspx_th_liferay$1ui_message_1);
+                    return;
+                  }
+                  _jspx_tagPool_liferay$1ui_message_key_arguments_nobody.reuse(_jspx_th_liferay$1ui_message_1);
+                  out.write("\n");
+                  out.write("\t\t\t</h5>\n");
+                  out.write("\n");
+                  out.write("\t\t\t<h4>\n");
+                  out.write("\t\t\t\t");
+                  if (_jspx_meth_aui_a_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container$1column$1text_0, _jspx_page_context))
+                    return;
+                  out.write("\n");
+                  out.write("\t\t\t</h4>\n");
+                  out.write("\n");
+                  out.write("\t\t\t<h5 class=\"text-default\">\n");
+                  out.write("\t\t\t\t");
+                  //  aui:workflow-status
+                  com.liferay.taglib.aui.WorkflowStatusTag _jspx_th_aui_workflow$1status_0 = (com.liferay.taglib.aui.WorkflowStatusTag) _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.get(com.liferay.taglib.aui.WorkflowStatusTag.class);
+                  _jspx_th_aui_workflow$1status_0.setPageContext(_jspx_page_context);
+                  _jspx_th_aui_workflow$1status_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1column$1text_0);
+                  _jspx_th_aui_workflow$1status_0.setMarkupView("lexicon");
+                  _jspx_th_aui_workflow$1status_0.setShowIcon( true );
+                  _jspx_th_aui_workflow$1status_0.setShowLabel( false );
+                  _jspx_th_aui_workflow$1status_0.setStatus((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.status}", java.lang.Integer.class, (PageContext)_jspx_page_context, null));
+                  int _jspx_eval_aui_workflow$1status_0 = _jspx_th_aui_workflow$1status_0.doStartTag();
+                  if (_jspx_th_aui_workflow$1status_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                    _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.reuse(_jspx_th_aui_workflow$1status_0);
+                    return;
+                  }
+                  _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.reuse(_jspx_th_aui_workflow$1status_0);
+                  out.write("\n");
+                  out.write("\t\t\t</h5>\n");
+                  out.write("\t\t");
+                  int evalDoAfterBody = _jspx_th_liferay$1ui_search$1container$1column$1text_0.doAfterBody();
+                  if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+                    break;
+                } while (true);
+                if (_jspx_eval_liferay$1ui_search$1container$1column$1text_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+                  out = _jspx_page_context.popBody();
+              }
+              if (_jspx_th_liferay$1ui_search$1container$1column$1text_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                _jspx_tagPool_liferay$1ui_search$1container$1column$1text_colspan.reuse(_jspx_th_liferay$1ui_search$1container$1column$1text_0);
+                return;
+              }
+              _jspx_tagPool_liferay$1ui_search$1container$1column$1text_colspan.reuse(_jspx_th_liferay$1ui_search$1container$1column$1text_0);
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              if (_jspx_meth_liferay$1ui_search$1container$1column$1jsp_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container$1row_0, _jspx_page_context))
+                return;
+              out.write('\n');
+              out.write('	');
+              out.write("\n");
+              out.write("\n");
+              out.write("\t");
+              out.write("\n");
+              out.write("\n");
+              out.write("\t");
+}
+else if (
+((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getDisplayStyle().equals(\"icon\")}", boolean.class, (PageContext)_jspx_page_context, null)).booleanValue()) {
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+
+			row.setCssClass("lfr-asset-item");
+		
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              //  liferay-ui:search-container-column-text
+              com.liferay.taglib.ui.SearchContainerColumnTextTag _jspx_th_liferay$1ui_search$1container$1column$1text_1 = (com.liferay.taglib.ui.SearchContainerColumnTextTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1text.get(com.liferay.taglib.ui.SearchContainerColumnTextTag.class);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_1.setPageContext(_jspx_page_context);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+              int _jspx_eval_liferay$1ui_search$1container$1column$1text_1 = _jspx_th_liferay$1ui_search$1container$1column$1text_1.doStartTag();
+              if (_jspx_eval_liferay$1ui_search$1container$1column$1text_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+                if (_jspx_eval_liferay$1ui_search$1container$1column$1text_1 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+                  out = _jspx_page_context.pushBody();
+                  _jspx_th_liferay$1ui_search$1container$1column$1text_1.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+                  _jspx_th_liferay$1ui_search$1container$1column$1text_1.doInitBody();
+                }
+                do {
+                  out.write("\n");
+                  out.write("\n");
+                  out.write("\t\t\t");
+                  out.write("\n");
+                  out.write("\n");
+                  out.write("\t\t\t");
+                  //  liferay-frontend:icon-vertical-card
+                  com.liferay.frontend.taglib.servlet.taglib.IconVerticalCardTag _jspx_th_liferay$1frontend_icon$1vertical$1card_0 = (com.liferay.frontend.taglib.servlet.taglib.IconVerticalCardTag) _jspx_tagPool_liferay$1frontend_icon$1vertical$1card_url_title_resultRow_icon_actionJspServletContext_actionJsp.get(com.liferay.frontend.taglib.servlet.taglib.IconVerticalCardTag.class);
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setPageContext(_jspx_page_context);
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1column$1text_1);
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setActionJsp("/assignment/entry_actions.jsp");
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setActionJspServletContext( application );
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setIcon("cards2");
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setResultRow((com.liferay.portal.kernel.dao.search.ResultRow) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${row}", com.liferay.portal.kernel.dao.search.ResultRow.class, (PageContext)_jspx_page_context, null));
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setTitle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.getTitle(locale)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+                  _jspx_th_liferay$1frontend_icon$1vertical$1card_0.setUrl((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${viewSubmissionsURL}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+                  int _jspx_eval_liferay$1frontend_icon$1vertical$1card_0 = _jspx_th_liferay$1frontend_icon$1vertical$1card_0.doStartTag();
+                  if (_jspx_eval_liferay$1frontend_icon$1vertical$1card_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+                    out.write("\n");
+                    out.write("\n");
+                    out.write("\t\t\t\t");
+                    if (_jspx_meth_liferay$1frontend_vertical$1card$1sticker$1bottom_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1frontend_icon$1vertical$1card_0, _jspx_page_context))
+                      return;
+                    out.write("\n");
+                    out.write("\n");
+                    out.write("\t\t\t\t");
+                    //  liferay-frontend:vertical-card-footer
+                    com.liferay.frontend.taglib.servlet.taglib.VerticalCardFooterTag _jspx_th_liferay$1frontend_vertical$1card$1footer_0 = (com.liferay.frontend.taglib.servlet.taglib.VerticalCardFooterTag) _jspx_tagPool_liferay$1frontend_vertical$1card$1footer.get(com.liferay.frontend.taglib.servlet.taglib.VerticalCardFooterTag.class);
+                    _jspx_th_liferay$1frontend_vertical$1card$1footer_0.setPageContext(_jspx_page_context);
+                    _jspx_th_liferay$1frontend_vertical$1card$1footer_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1frontend_icon$1vertical$1card_0);
+                    int _jspx_eval_liferay$1frontend_vertical$1card$1footer_0 = _jspx_th_liferay$1frontend_vertical$1card$1footer_0.doStartTag();
+                    if (_jspx_eval_liferay$1frontend_vertical$1card$1footer_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+                      if (_jspx_eval_liferay$1frontend_vertical$1card$1footer_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+                        out = _jspx_page_context.pushBody();
+                        _jspx_th_liferay$1frontend_vertical$1card$1footer_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+                        _jspx_th_liferay$1frontend_vertical$1card$1footer_0.doInitBody();
+                      }
+                      do {
+                        out.write("\n");
+                        out.write("\n");
+                        out.write("\t\t\t\t\t");
+                        out.write("\n");
+                        out.write("\n");
+                        out.write("\t\t\t\t\t");
+                        //  aui:workflow-status
+                        com.liferay.taglib.aui.WorkflowStatusTag _jspx_th_aui_workflow$1status_1 = (com.liferay.taglib.aui.WorkflowStatusTag) _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.get(com.liferay.taglib.aui.WorkflowStatusTag.class);
+                        _jspx_th_aui_workflow$1status_1.setPageContext(_jspx_page_context);
+                        _jspx_th_aui_workflow$1status_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1frontend_vertical$1card$1footer_0);
+                        _jspx_th_aui_workflow$1status_1.setMarkupView("lexicon");
+                        _jspx_th_aui_workflow$1status_1.setShowIcon( false );
+                        _jspx_th_aui_workflow$1status_1.setShowLabel( false );
+                        _jspx_th_aui_workflow$1status_1.setStatus((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.status}", java.lang.Integer.class, (PageContext)_jspx_page_context, null));
+                        int _jspx_eval_aui_workflow$1status_1 = _jspx_th_aui_workflow$1status_1.doStartTag();
+                        if (_jspx_th_aui_workflow$1status_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                          _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.reuse(_jspx_th_aui_workflow$1status_1);
+                          return;
+                        }
+                        _jspx_tagPool_aui_workflow$1status_status_showLabel_showIcon_markupView_nobody.reuse(_jspx_th_aui_workflow$1status_1);
+                        out.write("\t\t\t\t\t  \n");
+                        out.write("\t\t\t\t  \n");
+                        out.write("\t\t\t\t  \t<div class=\"truncate-text\">\n");
+                        out.write("\t\t\t\t  \t\n");
+                        out.write("\t\t\t\t  \t\t");
+                        out.write("\n");
+                        out.write("\t\t\t\t  \t\t\n");
+                        out.write("\t\t\t\t  \t\t");
+                        out.print(HtmlUtil.stripHtml(entry.getDescription()) );
+                        out.write("\n");
+                        out.write("\t\t\t\t  \t</div>\n");
+                        out.write("\t\t\t\t");
+                        int evalDoAfterBody = _jspx_th_liferay$1frontend_vertical$1card$1footer_0.doAfterBody();
+                        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+                          break;
+                      } while (true);
+                      if (_jspx_eval_liferay$1frontend_vertical$1card$1footer_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+                        out = _jspx_page_context.popBody();
+                    }
+                    if (_jspx_th_liferay$1frontend_vertical$1card$1footer_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                      _jspx_tagPool_liferay$1frontend_vertical$1card$1footer.reuse(_jspx_th_liferay$1frontend_vertical$1card$1footer_0);
+                      return;
+                    }
+                    _jspx_tagPool_liferay$1frontend_vertical$1card$1footer.reuse(_jspx_th_liferay$1frontend_vertical$1card$1footer_0);
+                    out.write("\n");
+                    out.write("\t\t\t");
+                  }
+                  if (_jspx_th_liferay$1frontend_icon$1vertical$1card_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                    _jspx_tagPool_liferay$1frontend_icon$1vertical$1card_url_title_resultRow_icon_actionJspServletContext_actionJsp.reuse(_jspx_th_liferay$1frontend_icon$1vertical$1card_0);
+                    return;
+                  }
+                  _jspx_tagPool_liferay$1frontend_icon$1vertical$1card_url_title_resultRow_icon_actionJspServletContext_actionJsp.reuse(_jspx_th_liferay$1frontend_icon$1vertical$1card_0);
+                  out.write("\n");
+                  out.write("\t\t");
+                  int evalDoAfterBody = _jspx_th_liferay$1ui_search$1container$1column$1text_1.doAfterBody();
+                  if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+                    break;
+                } while (true);
+                if (_jspx_eval_liferay$1ui_search$1container$1column$1text_1 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+                  out = _jspx_page_context.popBody();
+              }
+              if (_jspx_th_liferay$1ui_search$1container$1column$1text_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                _jspx_tagPool_liferay$1ui_search$1container$1column$1text.reuse(_jspx_th_liferay$1ui_search$1container$1column$1text_1);
+                return;
+              }
+              _jspx_tagPool_liferay$1ui_search$1container$1column$1text.reuse(_jspx_th_liferay$1ui_search$1container$1column$1text_1);
+              out.write('\n');
+              out.write('	');
+              out.write("\n");
+              out.write("\t\n");
+              out.write("\t");
+              out.write("\n");
+              out.write("\n");
+              out.write("\t");
+}
+else {
+              out.write("\n");
+              out.write("\t\t");
+              //  liferay-ui:search-container-column-text
+              com.liferay.taglib.ui.SearchContainerColumnTextTag _jspx_th_liferay$1ui_search$1container$1column$1text_2 = (com.liferay.taglib.ui.SearchContainerColumnTextTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1text_value_name_href_nobody.get(com.liferay.taglib.ui.SearchContainerColumnTextTag.class);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_2.setPageContext(_jspx_page_context);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+              _jspx_th_liferay$1ui_search$1container$1column$1text_2.setHref((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${viewSubmissionsURL}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+              _jspx_th_liferay$1ui_search$1container$1column$1text_2.setName("title");
+              _jspx_th_liferay$1ui_search$1container$1column$1text_2.setValue( entry.getTitle(locale) );
+              int _jspx_eval_liferay$1ui_search$1container$1column$1text_2 = _jspx_th_liferay$1ui_search$1container$1column$1text_2.doStartTag();
+              if (_jspx_th_liferay$1ui_search$1container$1column$1text_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                _jspx_tagPool_liferay$1ui_search$1container$1column$1text_value_name_href_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1text_2);
+                return;
+              }
+              _jspx_tagPool_liferay$1ui_search$1container$1column$1text_value_name_href_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1text_2);
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              if (_jspx_meth_liferay$1ui_search$1container$1column$1user_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container$1row_0, _jspx_page_context))
+                return;
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              if (_jspx_meth_liferay$1ui_search$1container$1column$1date_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container$1row_0, _jspx_page_context))
+                return;
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              if (_jspx_meth_liferay$1ui_search$1container$1column$1status_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container$1row_0, _jspx_page_context))
+                return;
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t");
+              if (_jspx_meth_liferay$1ui_search$1container$1column$1jsp_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container$1row_0, _jspx_page_context))
+                return;
+              out.write('\n');
+              out.write('	');
+              out.write('\n');
+}
+              out.write("\n");
+              out.write("\n");
+              out.write("\n");
+              out.write("\n");
+              out.write("\n");
+              out.write("\t\t\t");
+              int evalDoAfterBody = _jspx_th_liferay$1ui_search$1container$1row_0.doAfterBody();
+              index = (java.lang.Integer) _jspx_page_context.findAttribute("index");
+              entry = (com.liferay.training.gradebook.model.Assignment) _jspx_page_context.findAttribute("entry");
+              row = (com.liferay.portal.kernel.dao.search.ResultRow) _jspx_page_context.findAttribute("row");
+              if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+                break;
+            } while (true);
+            if (_jspx_eval_liferay$1ui_search$1container$1row_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+              out = _jspx_page_context.popBody();
+          }
+          if (_jspx_th_liferay$1ui_search$1container$1row_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+            _jspx_tagPool_liferay$1ui_search$1container$1row_modelVar_className.reuse(_jspx_th_liferay$1ui_search$1container$1row_0);
+            return;
+          }
+          _jspx_tagPool_liferay$1ui_search$1container$1row_modelVar_className.reuse(_jspx_th_liferay$1ui_search$1container$1row_0);
+          out.write("\n");
+          out.write("\t\t\t\n");
+          out.write("\t\t\t");
+          out.write("\n");
+          out.write("\n");
+          out.write("\t\t\t");
+          if (_jspx_meth_liferay$1ui_search$1iterator_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1ui_search$1container_0, _jspx_page_context))
+            return;
+          out.write("\n");
+          out.write("\t\t");
+        }
+        if (_jspx_th_liferay$1ui_search$1container_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+          _jspx_tagPool_liferay$1ui_search$1container_total_iteratorURL_id_emptyResultsMessage.reuse(_jspx_th_liferay$1ui_search$1container_0);
+          return;
+        }
+        _jspx_tagPool_liferay$1ui_search$1container_total_iteratorURL_id_emptyResultsMessage.reuse(_jspx_th_liferay$1ui_search$1container_0);
+        out.write("\n");
+        out.write("\t</div>\n");
+      }
+      if (_jspx_th_liferay$1ddm_template$1renderer_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        _jspx_tagPool_liferay$1ddm_template$1renderer_entries_displayStyleGroupId_displayStyle_className.reuse(_jspx_th_liferay$1ddm_template$1renderer_0);
+        return;
+      }
+      _jspx_tagPool_liferay$1ddm_template$1renderer_entries_displayStyleGroupId_displayStyle_className.reuse(_jspx_th_liferay$1ddm_template$1renderer_0);
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -123,21 +859,341 @@ public final class view_jsp extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
-  private boolean _jspx_meth_liferay$1ui_message_0(PageContext _jspx_page_context)
+  private boolean _jspx_meth_liferay$1ui_success_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:success
+    com.liferay.taglib.ui.SuccessTag _jspx_th_liferay$1ui_success_0 = (com.liferay.taglib.ui.SuccessTag) _jspx_tagPool_liferay$1ui_success_message_key_nobody.get(com.liferay.taglib.ui.SuccessTag.class);
+    _jspx_th_liferay$1ui_success_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_success_0.setParent(null);
+    _jspx_th_liferay$1ui_success_0.setKey("assignment-added");
+    _jspx_th_liferay$1ui_success_0.setMessage("assignment-added-successfully");
+    int _jspx_eval_liferay$1ui_success_0 = _jspx_th_liferay$1ui_success_0.doStartTag();
+    if (_jspx_th_liferay$1ui_success_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_success_message_key_nobody.reuse(_jspx_th_liferay$1ui_success_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_success_message_key_nobody.reuse(_jspx_th_liferay$1ui_success_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_success_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:success
+    com.liferay.taglib.ui.SuccessTag _jspx_th_liferay$1ui_success_1 = (com.liferay.taglib.ui.SuccessTag) _jspx_tagPool_liferay$1ui_success_message_key_nobody.get(com.liferay.taglib.ui.SuccessTag.class);
+    _jspx_th_liferay$1ui_success_1.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_success_1.setParent(null);
+    _jspx_th_liferay$1ui_success_1.setKey("assignment-update");
+    _jspx_th_liferay$1ui_success_1.setMessage("assignment-update-successfully");
+    int _jspx_eval_liferay$1ui_success_1 = _jspx_th_liferay$1ui_success_1.doStartTag();
+    if (_jspx_th_liferay$1ui_success_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_success_message_key_nobody.reuse(_jspx_th_liferay$1ui_success_1);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_success_message_key_nobody.reuse(_jspx_th_liferay$1ui_success_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_success_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:success
+    com.liferay.taglib.ui.SuccessTag _jspx_th_liferay$1ui_success_2 = (com.liferay.taglib.ui.SuccessTag) _jspx_tagPool_liferay$1ui_success_message_key_nobody.get(com.liferay.taglib.ui.SuccessTag.class);
+    _jspx_th_liferay$1ui_success_2.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_success_2.setParent(null);
+    _jspx_th_liferay$1ui_success_2.setKey("assignment-deleted");
+    _jspx_th_liferay$1ui_success_2.setMessage("assignment-deleted-successfully");
+    int _jspx_eval_liferay$1ui_success_2 = _jspx_th_liferay$1ui_success_2.doStartTag();
+    if (_jspx_th_liferay$1ui_success_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_success_message_key_nobody.reuse(_jspx_th_liferay$1ui_success_2);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_success_message_key_nobody.reuse(_jspx_th_liferay$1ui_success_2);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_message_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ddm_template$1renderer_0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  liferay-ui:message
     com.liferay.taglib.ui.MessageTag _jspx_th_liferay$1ui_message_0 = (com.liferay.taglib.ui.MessageTag) _jspx_tagPool_liferay$1ui_message_key_nobody.get(com.liferay.taglib.ui.MessageTag.class);
     _jspx_th_liferay$1ui_message_0.setPageContext(_jspx_page_context);
-    _jspx_th_liferay$1ui_message_0.setParent(null);
-    _jspx_th_liferay$1ui_message_0.setKey("gradebook.caption");
+    _jspx_th_liferay$1ui_message_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ddm_template$1renderer_0);
+    _jspx_th_liferay$1ui_message_0.setKey("assignments");
     int _jspx_eval_liferay$1ui_message_0 = _jspx_th_liferay$1ui_message_0.doStartTag();
     if (_jspx_th_liferay$1ui_message_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_liferay$1ui_message_key_nobody.reuse(_jspx_th_liferay$1ui_message_0);
       return true;
     }
     _jspx_tagPool_liferay$1ui_message_key_nobody.reuse(_jspx_th_liferay$1ui_message_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_clay_management$1toolbar_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ddm_template$1renderer_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  clay:management-toolbar
+    com.liferay.frontend.taglib.clay.servlet.taglib.soy.ManagementToolbarTag _jspx_th_clay_management$1toolbar_0 = (com.liferay.frontend.taglib.clay.servlet.taglib.soy.ManagementToolbarTag) _jspx_tagPool_clay_management$1toolbar_viewTypeItems_sortingURL_sortingOrder_showInfoButton_selectable_searchFormName_searchContainerId_searchActionURL_itemsTotal_filterDropdownItems_disabled_creationMenu_componentId_clearResultsURL_nobody.get(com.liferay.frontend.taglib.clay.servlet.taglib.soy.ManagementToolbarTag.class);
+    _jspx_th_clay_management$1toolbar_0.setPageContext(_jspx_page_context);
+    _jspx_th_clay_management$1toolbar_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ddm_template$1renderer_0);
+    _jspx_th_clay_management$1toolbar_0.setClearResultsURL((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getSearchActionURL()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setComponentId("assignmentsManagementToolbar");
+    _jspx_th_clay_management$1toolbar_0.setCreationMenu((com.liferay.frontend.taglib.clay.servlet.taglib.util.CreationMenu) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getCreationMenu()}", com.liferay.frontend.taglib.clay.servlet.taglib.util.CreationMenu.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setDisabled((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentCount eq 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setFilterDropdownItems((java.util.List) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getFilterDropdownItems()}", java.util.List.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setItemsTotal(((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentCount}", int.class, (PageContext)_jspx_page_context, null)).intValue());
+    _jspx_th_clay_management$1toolbar_0.setSearchActionURL((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getSearchActionURL()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setSearchContainerId("assignmentEntries");
+    _jspx_th_clay_management$1toolbar_0.setSearchFormName("searchFm");
+    _jspx_th_clay_management$1toolbar_0.setSelectable(new Boolean(false));
+    _jspx_th_clay_management$1toolbar_0.setShowInfoButton(new Boolean(false));
+    _jspx_th_clay_management$1toolbar_0.setSortingOrder((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getOrderByType()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setSortingURL((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getSortingURL()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_clay_management$1toolbar_0.setViewTypeItems((java.util.List) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getViewTypes()}", java.util.List.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_clay_management$1toolbar_0 = _jspx_th_clay_management$1toolbar_0.doStartTag();
+    if (_jspx_th_clay_management$1toolbar_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_clay_management$1toolbar_viewTypeItems_sortingURL_sortingOrder_showInfoButton_selectable_searchFormName_searchContainerId_searchActionURL_itemsTotal_filterDropdownItems_disabled_creationMenu_componentId_clearResultsURL_nobody.reuse(_jspx_th_clay_management$1toolbar_0);
+      return true;
+    }
+    _jspx_tagPool_clay_management$1toolbar_viewTypeItems_sortingURL_sortingOrder_showInfoButton_selectable_searchFormName_searchContainerId_searchActionURL_itemsTotal_filterDropdownItems_disabled_creationMenu_componentId_clearResultsURL_nobody.reuse(_jspx_th_clay_management$1toolbar_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_portlet_param_1(javax.servlet.jsp.tagext.JspTag _jspx_th_portlet_renderURL_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  portlet:param
+    com.liferay.taglib.util.ParamTag _jspx_th_portlet_param_1 = (com.liferay.taglib.util.ParamTag) _jspx_tagPool_portlet_param_value_name_nobody.get(com.liferay.taglib.util.ParamTag.class);
+    _jspx_th_portlet_param_1.setPageContext(_jspx_page_context);
+    _jspx_th_portlet_param_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_portlet_renderURL_0);
+    _jspx_th_portlet_param_1.setName("redirect");
+    _jspx_th_portlet_param_1.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentURL}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_portlet_param_1 = _jspx_th_portlet_param_1.doStartTag();
+    if (_jspx_th_portlet_param_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_portlet_param_value_name_nobody.reuse(_jspx_th_portlet_param_1);
+      return true;
+    }
+    _jspx_tagPool_portlet_param_value_name_nobody.reuse(_jspx_th_portlet_param_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_portlet_param_2(javax.servlet.jsp.tagext.JspTag _jspx_th_portlet_renderURL_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  portlet:param
+    com.liferay.taglib.util.ParamTag _jspx_th_portlet_param_2 = (com.liferay.taglib.util.ParamTag) _jspx_tagPool_portlet_param_value_name_nobody.get(com.liferay.taglib.util.ParamTag.class);
+    _jspx_th_portlet_param_2.setPageContext(_jspx_page_context);
+    _jspx_th_portlet_param_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_portlet_renderURL_0);
+    _jspx_th_portlet_param_2.setName("assignmentId");
+    _jspx_th_portlet_param_2.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.assignmentId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_portlet_param_2 = _jspx_th_portlet_param_2.doStartTag();
+    if (_jspx_th_portlet_param_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_portlet_param_value_name_nobody.reuse(_jspx_th_portlet_param_2);
+      return true;
+    }
+    _jspx_tagPool_portlet_param_value_name_nobody.reuse(_jspx_th_portlet_param_2);
+    return false;
+  }
+
+  private boolean _jspx_meth_aui_a_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container$1column$1text_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  aui:a
+    com.liferay.taglib.aui.ATag _jspx_th_aui_a_0 = (com.liferay.taglib.aui.ATag) _jspx_tagPool_aui_a_href.get(com.liferay.taglib.aui.ATag.class);
+    _jspx_th_aui_a_0.setPageContext(_jspx_page_context);
+    _jspx_th_aui_a_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1column$1text_0);
+    _jspx_th_aui_a_0.setHref((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${viewSubmissionsURL}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_aui_a_0 = _jspx_th_aui_a_0.doStartTag();
+    if (_jspx_eval_aui_a_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      out.write("\n");
+      out.write("\t\t\t\t\t");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.getTitle(locale)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\n");
+      out.write("\t\t\t\t");
+    }
+    if (_jspx_th_aui_a_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_aui_a_href.reuse(_jspx_th_aui_a_0);
+      return true;
+    }
+    _jspx_tagPool_aui_a_href.reuse(_jspx_th_aui_a_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_search$1container$1column$1jsp_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container$1row_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:search-container-column-jsp
+    com.liferay.taglib.ui.SearchContainerColumnJSPTag _jspx_th_liferay$1ui_search$1container$1column$1jsp_0 = (com.liferay.taglib.ui.SearchContainerColumnJSPTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_nobody.get(com.liferay.taglib.ui.SearchContainerColumnJSPTag.class);
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_0.setPath("/assignment/entry_actions.jsp");
+    int _jspx_eval_liferay$1ui_search$1container$1column$1jsp_0 = _jspx_th_liferay$1ui_search$1container$1column$1jsp_0.doStartTag();
+    if (_jspx_th_liferay$1ui_search$1container$1column$1jsp_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1jsp_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1jsp_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1frontend_vertical$1card$1sticker$1bottom_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1frontend_icon$1vertical$1card_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-frontend:vertical-card-sticker-bottom
+    com.liferay.frontend.taglib.servlet.taglib.VerticalCardStickerBottomTag _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0 = (com.liferay.frontend.taglib.servlet.taglib.VerticalCardStickerBottomTag) _jspx_tagPool_liferay$1frontend_vertical$1card$1sticker$1bottom.get(com.liferay.frontend.taglib.servlet.taglib.VerticalCardStickerBottomTag.class);
+    _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1frontend_icon$1vertical$1card_0);
+    int _jspx_eval_liferay$1frontend_vertical$1card$1sticker$1bottom_0 = _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.doStartTag();
+    if (_jspx_eval_liferay$1frontend_vertical$1card$1sticker$1bottom_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      if (_jspx_eval_liferay$1frontend_vertical$1card$1sticker$1bottom_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+        out = _jspx_page_context.pushBody();
+        _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+        _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.doInitBody();
+      }
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\n");
+        out.write("\t\t\t\t\t");
+        if (_jspx_meth_liferay$1ui_user$1portrait_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+      if (_jspx_eval_liferay$1frontend_vertical$1card$1sticker$1bottom_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
+        out = _jspx_page_context.popBody();
+    }
+    if (_jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1frontend_vertical$1card$1sticker$1bottom.reuse(_jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1frontend_vertical$1card$1sticker$1bottom.reuse(_jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_user$1portrait_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:user-portrait
+    com.liferay.taglib.ui.UserPortraitTag _jspx_th_liferay$1ui_user$1portrait_0 = (com.liferay.taglib.ui.UserPortraitTag) _jspx_tagPool_liferay$1ui_user$1portrait_userId_cssClass_nobody.get(com.liferay.taglib.ui.UserPortraitTag.class);
+    _jspx_th_liferay$1ui_user$1portrait_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_user$1portrait_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1frontend_vertical$1card$1sticker$1bottom_0);
+    _jspx_th_liferay$1ui_user$1portrait_0.setCssClass("sticker sticker-bottom");
+    _jspx_th_liferay$1ui_user$1portrait_0.setUserId(((java.lang.Long) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.userId}", long.class, (PageContext)_jspx_page_context, null)).longValue());
+    int _jspx_eval_liferay$1ui_user$1portrait_0 = _jspx_th_liferay$1ui_user$1portrait_0.doStartTag();
+    if (_jspx_th_liferay$1ui_user$1portrait_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_user$1portrait_userId_cssClass_nobody.reuse(_jspx_th_liferay$1ui_user$1portrait_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_user$1portrait_userId_cssClass_nobody.reuse(_jspx_th_liferay$1ui_user$1portrait_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_search$1container$1column$1user_1(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container$1row_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:search-container-column-user
+    com.liferay.taglib.ui.SearchContainerColumnUserTag _jspx_th_liferay$1ui_search$1container$1column$1user_1 = (com.liferay.taglib.ui.SearchContainerColumnUserTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_name_nobody.get(com.liferay.taglib.ui.SearchContainerColumnUserTag.class);
+    _jspx_th_liferay$1ui_search$1container$1column$1user_1.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_search$1container$1column$1user_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+    _jspx_th_liferay$1ui_search$1container$1column$1user_1.setName("author");
+    _jspx_th_liferay$1ui_search$1container$1column$1user_1.setUserId(((java.lang.Long) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${entry.userId}", long.class, (PageContext)_jspx_page_context, null)).longValue());
+    int _jspx_eval_liferay$1ui_search$1container$1column$1user_1 = _jspx_th_liferay$1ui_search$1container$1column$1user_1.doStartTag();
+    if (_jspx_th_liferay$1ui_search$1container$1column$1user_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1user_1);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1user_userId_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1user_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_search$1container$1column$1date_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container$1row_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:search-container-column-date
+    com.liferay.taglib.ui.SearchContainerColumnDateTag _jspx_th_liferay$1ui_search$1container$1column$1date_0 = (com.liferay.taglib.ui.SearchContainerColumnDateTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1date_property_name_nobody.get(com.liferay.taglib.ui.SearchContainerColumnDateTag.class);
+    _jspx_th_liferay$1ui_search$1container$1column$1date_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_search$1container$1column$1date_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+    _jspx_th_liferay$1ui_search$1container$1column$1date_0.setName("create-date");
+    _jspx_th_liferay$1ui_search$1container$1column$1date_0.setProperty("createDate");
+    int _jspx_eval_liferay$1ui_search$1container$1column$1date_0 = _jspx_th_liferay$1ui_search$1container$1column$1date_0.doStartTag();
+    if (_jspx_th_liferay$1ui_search$1container$1column$1date_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_search$1container$1column$1date_property_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1date_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1date_property_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1date_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_search$1container$1column$1status_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container$1row_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:search-container-column-status
+    com.liferay.taglib.ui.SearchContainerColumnStatusTag _jspx_th_liferay$1ui_search$1container$1column$1status_0 = (com.liferay.taglib.ui.SearchContainerColumnStatusTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1status_name_nobody.get(com.liferay.taglib.ui.SearchContainerColumnStatusTag.class);
+    _jspx_th_liferay$1ui_search$1container$1column$1status_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_search$1container$1column$1status_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+    _jspx_th_liferay$1ui_search$1container$1column$1status_0.setName("status");
+    int _jspx_eval_liferay$1ui_search$1container$1column$1status_0 = _jspx_th_liferay$1ui_search$1container$1column$1status_0.doStartTag();
+    if (_jspx_th_liferay$1ui_search$1container$1column$1status_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_search$1container$1column$1status_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1status_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1status_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1status_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_search$1container$1column$1jsp_1(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container$1row_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:search-container-column-jsp
+    com.liferay.taglib.ui.SearchContainerColumnJSPTag _jspx_th_liferay$1ui_search$1container$1column$1jsp_1 = (com.liferay.taglib.ui.SearchContainerColumnJSPTag) _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_name_nobody.get(com.liferay.taglib.ui.SearchContainerColumnJSPTag.class);
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_1.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container$1row_0);
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_1.setName("actions");
+    _jspx_th_liferay$1ui_search$1container$1column$1jsp_1.setPath("/assignment/entry_actions.jsp");
+    int _jspx_eval_liferay$1ui_search$1container$1column$1jsp_1 = _jspx_th_liferay$1ui_search$1container$1column$1jsp_1.doStartTag();
+    if (_jspx_th_liferay$1ui_search$1container$1column$1jsp_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1jsp_1);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_search$1container$1column$1jsp_path_name_nobody.reuse(_jspx_th_liferay$1ui_search$1container$1column$1jsp_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_liferay$1ui_search$1iterator_0(javax.servlet.jsp.tagext.JspTag _jspx_th_liferay$1ui_search$1container_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  liferay-ui:search-iterator
+    com.liferay.taglib.ui.SearchIteratorTag _jspx_th_liferay$1ui_search$1iterator_0 = (com.liferay.taglib.ui.SearchIteratorTag) _jspx_tagPool_liferay$1ui_search$1iterator_markupView_displayStyle_nobody.get(com.liferay.taglib.ui.SearchIteratorTag.class);
+    _jspx_th_liferay$1ui_search$1iterator_0.setPageContext(_jspx_page_context);
+    _jspx_th_liferay$1ui_search$1iterator_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_liferay$1ui_search$1container_0);
+    _jspx_th_liferay$1ui_search$1iterator_0.setDisplayStyle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${assignmentsManagementToolbarDisplayContext.getDisplayStyle()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_liferay$1ui_search$1iterator_0.setMarkupView("lexicon");
+    int _jspx_eval_liferay$1ui_search$1iterator_0 = _jspx_th_liferay$1ui_search$1iterator_0.doStartTag();
+    if (_jspx_th_liferay$1ui_search$1iterator_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_liferay$1ui_search$1iterator_markupView_displayStyle_nobody.reuse(_jspx_th_liferay$1ui_search$1iterator_0);
+      return true;
+    }
+    _jspx_tagPool_liferay$1ui_search$1iterator_markupView_displayStyle_nobody.reuse(_jspx_th_liferay$1ui_search$1iterator_0);
     return false;
   }
 }

@@ -13,9 +13,11 @@
  */
 package com.liferay.training.gradebook.exception;
 
-import aQute.bnd.annotation.ProviderType;
-
 import com.liferay.portal.kernel.exception.PortalException;
+
+import java.util.List;
+
+import aQute.bnd.annotation.ProviderType;
 
 /**
  * @author Brian Wing Shun Chan
@@ -37,5 +39,15 @@ public class AssignmentValidationException extends PortalException {
 	public AssignmentValidationException(Throwable cause) {
 		super(cause);
 	}
+	
+	public AssignmentValidationException(List<String> errors) {
+		super(String.join(",", errors));
+	}
+	
+	public List<String> getErrors(){
+		return _errors;
+	}
+	
+	private List<String> _errors;
 
 }

@@ -1,0 +1,25 @@
+.portlet-admin .search-admin-tabs {
+  margin-top: 20px; }
+
+.portlet-admin .progress-percentage {
+  color: black;
+  display: block;
+  position: absolute;
+  width: 100%; }
+
+.portlet-admin .reindex-progress {
+  margin-bottom: 0;
+  position: relative;
+  width: 100px; }
+
+.portlet-admin .search-admin-actions-panel .panel-body {
+  padding: 0; }
+
+.portlet-admin .search-status-container {
+  padding: 20px; }
+
+.portlet-admin .system-action-group {
+  margin-bottom: 0; }
+  .portlet-admin .system-action-group li {
+    padding-left: 15px;
+    padding-right: 15px; }

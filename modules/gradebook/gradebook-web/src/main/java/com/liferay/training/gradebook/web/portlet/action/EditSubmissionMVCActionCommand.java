@@ -98,7 +98,7 @@ public class EditSubmissionMVCActionCommand extends BaseMVCActionCommand {
 		}
 		catch (SubmissionValidationException e) {
 
-			// e.getErrors().forEach(key -> SessionErrors.add(actionRequest, key));
+			 e.getErrors().forEach(key -> SessionErrors.add(actionRequest, key));
 
 			// Hide default error message
 

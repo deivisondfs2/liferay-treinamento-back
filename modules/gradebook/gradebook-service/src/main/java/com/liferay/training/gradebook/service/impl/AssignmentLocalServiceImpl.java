@@ -33,9 +33,9 @@ import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.kernel.workflow.WorkflowHandlerRegistryUtil;
 import com.liferay.training.gradebook.model.Assignment;
 import com.liferay.training.gradebook.service.base.AssignmentLocalServiceBaseImpl;
+import com.liferay.training.gradebook.service.validation.AssignmentValidator;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -76,12 +76,17 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 	
 	/***** [PLACEHOLDER FOR INDEXABLE ANNOTATION (REINDEX)] *****/
 
+	@Indexable(
+			type =  IndexableType.REINDEX
+	)
 	public Assignment addAssignment(
 		long groupId, Map<Locale, String> titleMap, String description,
 		Date dueDate, ServiceContext serviceContext)
 		throws PortalException {
 
 		/***** [PLACEHOLDER FOR ASSIGNMENT VALIDATION *****/
+		
+		AssignmentValidator.validate(titleMap, description, dueDate);
 
 		// Get group and same time validate that it exists.
 
@@ -109,12 +114,12 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 		assignment.setDueDate(dueDate);
 		assignment.setDescription(description);
 
-		/*
+		
 		assignment.setStatus(WorkflowConstants.STATUS_DRAFT);
 		assignment.setStatusByUserId(userId);
 		assignment.setStatusByUserName(user.getFullName());
 		assignment.setStatusDate(serviceContext.getModifiedDate(null));
-		*/
+		
 
 		assignment.setUserName(user.getScreenName());
 		assignment.setCreateDate(serviceContext.getCreateDate(new Date()));
@@ -144,10 +149,12 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 		
 		
 		/***** [PLACHOLDER FOR UPDATING ASSET] *****/
+		
+		updateAsset(assignment, serviceContext);
 
 		/***** [PLACEHOLDER FOR STARTING WORKFLOW INSTANCE *****/
 		
-		return assignment;
+		return startWorkflowInstance(userId, assignment, serviceContext);
 	}
 
 	/**
@@ -166,7 +173,9 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 	}
 
 	/***** [PLACEHOLDER FOR INDEXABLE ANNOTATION (DELETE)] *****/
-
+	@Indexable(
+			type = IndexableType.DELETE
+			)
 	public Assignment deleteAssignment(long assignmentId)
 		throws PortalException {
 
@@ -198,9 +207,15 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 
 		/***** [PLACHOLDER FOR DELETING ASSET] *****/
 		
+		assetEntryLocalService.deleteEntry(Assignment.class.getName(), assignment.getAssignmentId());
+		
 		// Delete workflow instance.
 
  		/***** PLACEHOLDER FOR DELETING WORKFLOW INSTANCE *****/
+		
+		workflowInstanceLinkLocalService.deleteWorkflowInstanceLink(assignment.getCompanyId(), 
+				assignment.getGroupId(), 
+				Assignment.class.getName(), assignment.getAssignmentId());
 
 		// Delete the Assignment
 
@@ -324,13 +339,19 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 	 */
 
 	/***** [PLACEHOLDER FOR INDEXABLE ANNOTATION (REINDEX)] *****/
-
+	
+	@Indexable(
+			type= IndexableType.REINDEX
+	)
+	
 	public Assignment updateAssignment(
 		long assignmentId, Map<Locale, String> titleMap, String description,
 		Date dueDate, ServiceContext serviceContext)
 		throws PortalException {
 
 		/***** [PLACEHOLDER FOR ASSIGNMENT VALIDATION *****/
+		
+		AssignmentValidator.validate(titleMap, description, dueDate);
 
 		// Get Assignment
 
@@ -346,6 +367,8 @@ public class AssignmentLocalServiceImpl extends AssignmentLocalServiceBaseImpl {
 		assignment = super.updateAssignment(assignment);
 
 		/***** [PLACEHOLDER FOR UPDATING ASSET *****/
+		
+		updateAsset(assignment, serviceContext);
 
 		return assignment;
 	}

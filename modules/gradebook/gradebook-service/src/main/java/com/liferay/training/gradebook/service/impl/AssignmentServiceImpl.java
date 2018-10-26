@@ -15,12 +15,14 @@
 package com.liferay.training.gradebook.service.impl;
 
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.security.permission.ActionKeys;
 import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.spring.extender.service.ServiceReference;
 import com.liferay.training.gradebook.model.Assignment;
 import com.liferay.training.gradebook.service.base.AssignmentServiceBaseImpl;
 import com.liferay.training.gradebook.service.permission.AssignmentPermissionChecker;
+import com.liferay.training.gradebook.service.permission.impl.AssignmentPermissionCheckerImpl;
 
 import java.util.Date;
 import java.util.List;
@@ -54,11 +56,11 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 
 		// Check permissions
 
-		/*
+		
 		_assignmentPermissionChecker.checkTopLevel(
 			getPermissionChecker(), serviceContext.getScopeGroupId(),
 			AssignmentPermissionCheckerImpl.ADD_ASSIGNMENT);
-		*/
+		
 		
 		return assignmentLocalService.addAssignment(
 			groupId, title, description, dueDate, serviceContext);
@@ -72,11 +74,11 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 
 		// Check permissions.
 
-		/*
+		
 		_assignmentPermissionChecker.check(
 			getPermissionChecker(), assignment.getGroupId(),
 			assignment.getAssignmentId(), ActionKeys.DELETE);
-		*/
+		
 		
 		return assignmentLocalService.deleteAssignment(assignment);
 	}
@@ -89,11 +91,11 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 
 		// Check permissions.
 
-		/*
+		
 		_assignmentPermissionChecker.check(
 			getPermissionChecker(), assignment.getGroupId(),
 			assignment.getAssignmentId(), ActionKeys.VIEW);
-		*/
+		
 		
 		return assignment;
 	}
@@ -131,11 +133,11 @@ public class AssignmentServiceImpl extends AssignmentServiceBaseImpl {
 
 		// Check permissions.
 
-		/*
+		
 	  	_assignmentPermissionChecker.check( 
 			  getPermissionChecker(), assignment.getGroupId(), 
 			  assignment.getAssignmentId(), ActionKeys.UPDATE);
-		*/
+		
 		
 		return assignmentLocalService.updateAssignment(
 			assignmentId, titleMap, description, dueDate, serviceContext);

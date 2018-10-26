@@ -1,6 +1,7 @@
 
 package com.liferay.training.gradebook.web.portlet.action;
 
+import com.liferay.portal.configuration.metatype.bnd.util.ConfigurableUtil;
 import com.liferay.portal.kernel.dao.search.SearchContainer;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.portlet.LiferayPortletRequest;
@@ -15,6 +16,7 @@ import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.training.gradebook.configuration.GradebookSystemServiceConfiguration;
 import com.liferay.training.gradebook.model.Assignment;
 import com.liferay.training.gradebook.model.Submission;
 import com.liferay.training.gradebook.service.AssignmentService;
@@ -26,12 +28,15 @@ import com.liferay.training.gradebook.web.display.context.SubmissionsManagementT
 
 import java.text.DateFormat;
 import java.util.List;
+import java.util.Map;
 
 import javax.portlet.PortletException;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
+import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
 
 /**
@@ -99,6 +104,16 @@ public class ViewSubmissionsMVCRenderCommand implements MVCRenderCommand {
 		catch (PortalException e) {
 			throw new PortletException(e);
 		}
+	}
+	
+	@Activate
+	@Modified
+	protected void activate(Map<String, Object> properties) {
+		
+		_gradebookSystemServiceConfiguration = ConfigurableUtil.createConfigurable(
+						GradebookSystemServiceConfiguration.class, 
+						properties);
+				
 	}
 
 	/**
@@ -225,6 +240,8 @@ public class ViewSubmissionsMVCRenderCommand implements MVCRenderCommand {
 		boolean isAllowMultipleSubmissions = false; 
 
 		/***** [PLACEHOLDER FOR READING THE CONFIGURATION] *****/
+		
+		isAllowMultipleSubmissions = _gradebookSystemServiceConfiguration.allowMultipleUserSubmissions();
 
 		boolean hasAlreadySubmitted = false;
 
@@ -259,5 +276,7 @@ public class ViewSubmissionsMVCRenderCommand implements MVCRenderCommand {
 
 	@Reference
 	private UserLocalService _userLocalService;
+	
+	protected volatile GradebookSystemServiceConfiguration _gradebookSystemServiceConfiguration;
 
 }

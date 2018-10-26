@@ -1501,3 +1501,9 @@
 2018/10/23 20:51:03 WARN  [LCS Worker 1][LCSConnectorRunnable:81] The LCS activation token file is missing from directory /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/data
 2018/10/23 20:51:03 INFO  [LCS Worker 1][LCSConnectorRunnable:119] LCS portlet is not connected
 2018/10/23 20:51:03 INFO  [LCS Worker 1][LCSConnectorRunnable:124] Retry in 60 seconds
+2018/10/23 20:52:03 WARN  [LCS Worker 1][LCSConnectorRunnable:81] The LCS activation token file is missing from directory /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/data
+2018/10/23 20:52:04 INFO  [LCS Worker 1][LCSConnectorRunnable:119] LCS portlet is not connected
+2018/10/23 20:52:04 INFO  [LCS Worker 1][LCSConnectorRunnable:124] Retry in 60 seconds
+2018/10/23 20:53:04 WARN  [LCS Worker 1][LCSConnectorRunnable:81] The LCS activation token file is missing from directory /media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/data
+2018/10/23 20:53:04 INFO  [LCS Worker 1][LCSConnectorRunnable:119] LCS portlet is not connected
+2018/10/23 20:53:04 INFO  [LCS Worker 1][LCSConnectorRunnable:124] Retry in 60 seconds

@@ -1,0 +1,1 @@
+127.0.0.1 - - [26/Oct/2018:11:43:51 +0000] "POST /c/portal/expire_session HTTP/1.1" 200 5

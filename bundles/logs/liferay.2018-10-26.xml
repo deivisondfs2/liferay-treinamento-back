@@ -1,0 +1,120 @@
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285418" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@5e75f0a6 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285422" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@1f366046 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285427" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@6eb753c6 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285428" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@ed98a16 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285429" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@7c6dd11a (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285432" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@50f5aa81 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285434" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@408ea3a (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285435" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@46434997 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285437" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@6af2dacc (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1540554285439" level="WARN" thread="liferay/scheduler_dispatch-2">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@36a139f4 (No operations allowed after connection closed.)]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="180"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.PortletHotDeployListener" timestamp="1540554938012" level="INFO" thread="main">
+<log4j:message><![CDATA[Unregistering portlets for jrs-286-portlet]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.PortletHotDeployListener" method="doInvokeUndeploy" file="PortletHotDeployListener.java" line="331"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.PortletHotDeployListener" timestamp="1540554938989" level="INFO" thread="main">
+<log4j:message><![CDATA[1 portlet for jrs-286-portlet was unregistered]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.PortletHotDeployListener" method="doInvokeUndeploy" file="PortletHotDeployListener.java" line="360"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.plugin.PluginPackageUtil" timestamp="1540554939173" level="INFO" thread="main">
+<log4j:message><![CDATA[Reading plugin package for jrs-286-portlet]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.plugin.PluginPackageUtil" method="_readPluginPackageServletContext" file="PluginPackageUtil.java" line="1001"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.ThemeHotDeployListener" timestamp="1540554940277" level="INFO" thread="main">
+<log4j:message><![CDATA[Unregistering themes for classic-theme]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.ThemeHotDeployListener" method="doInvokeUndeploy" file="ThemeHotDeployListener.java" line="136"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.ThemeHotDeployListener" timestamp="1540554940290" level="INFO" thread="main">
+<log4j:message><![CDATA[1 theme for classic-theme was unregistered]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.ThemeHotDeployListener" method="doInvokeUndeploy" file="ThemeHotDeployListener.java" line="170"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.plugin.PluginPackageUtil" timestamp="1540554940477" level="INFO" thread="main">
+<log4j:message><![CDATA[Reading plugin package for classic-theme]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.plugin.PluginPackageUtil" method="_readPluginPackageServletContext" file="PluginPackageUtil.java" line="1001"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.ThemeHotDeployListener" timestamp="1540554942443" level="INFO" thread="main">
+<log4j:message><![CDATA[Unregistering themes for admin-theme]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.ThemeHotDeployListener" method="doInvokeUndeploy" file="ThemeHotDeployListener.java" line="136"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.ThemeHotDeployListener" timestamp="1540554942444" level="INFO" thread="main">
+<log4j:message><![CDATA[1 theme for admin-theme was unregistered]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.ThemeHotDeployListener" method="doInvokeUndeploy" file="ThemeHotDeployListener.java" line="170"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.plugin.PluginPackageUtil" timestamp="1540554942446" level="INFO" thread="main">
+<log4j:message><![CDATA[Reading plugin package for admin-theme]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.plugin.PluginPackageUtil" method="_readPluginPackageServletContext" file="PluginPackageUtil.java" line="1001"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.PortletHotDeployListener" timestamp="1540554942658" level="INFO" thread="main">
+<log4j:message><![CDATA[Unregistering portlets for lcs-portlet]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.PortletHotDeployListener" method="doInvokeUndeploy" file="PortletHotDeployListener.java" line="331"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.PortletHotDeployListener" timestamp="1540554942680" level="INFO" thread="main">
+<log4j:message><![CDATA[1 portlet for lcs-portlet was unregistered]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.PortletHotDeployListener" method="doInvokeUndeploy" file="PortletHotDeployListener.java" line="360"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.deploy.hot.HookHotDeployListener" timestamp="1540554942682" level="INFO" thread="main">
+<log4j:message><![CDATA[Hook for lcs-portlet was unregistered]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.deploy.hot.HookHotDeployListener" method="doInvokeUndeploy" file="HookHotDeployListener.java" line="581"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.plugin.PluginPackageUtil" timestamp="1540554947722" level="INFO" thread="main">
+<log4j:message><![CDATA[Reading plugin package for lcs-portlet]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.plugin.PluginPackageUtil" method="_readPluginPackageServletContext" file="PluginPackageUtil.java" line="1001"/>
+</log4j:event>
+
+<log4j:event logger="org.apache.aries.jax.rs.whiteboard.activator.CxfJaxrsBundleActivator" timestamp="1540554960983" level="INFO" thread="main">
+<log4j:message><![CDATA[destroyed whiteboard from configuration: {default.application.base=/rest, default.web=false, felix.fileinstall.filename=file:/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/osgi/configs/org.apache.aries.jax.rs.whiteboard.default.cfg, service.pid=org.apache.aries.jax.rs.whiteboard.default}]]></log4j:message>
+<log4j:locationInfo class="org.apache.aries.jax.rs.whiteboard.internal.utils.LogUtils" method="lambda$ifInfoEnabled$3" file="LogUtils.java" line="60"/>
+</log4j:event>
+

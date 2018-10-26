@@ -71,7 +71,7 @@ public class GradeSubmissionMVCActionCommand extends BaseMVCActionCommand {
 
 			// Set errors.
 			
-			// e.getErrors().forEach(key -> SessionErrors.add(actionRequest, key));
+			 e.getErrors().forEach(key -> SessionErrors.add(actionRequest, key));
 
 			actionResponse.setRenderParameter(
 				"mvcRenderCommandName", MVCCommandNames.GRADE_SUBMISSION);			

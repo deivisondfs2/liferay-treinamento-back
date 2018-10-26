@@ -24,6 +24,7 @@ import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.spring.extender.service.ServiceReference;
+import com.liferay.training.gradebook.configuration.GradebookSystemServiceConfiguration;
 import com.liferay.training.gradebook.exception.SubmissionValidationException;
 import com.liferay.training.gradebook.model.Assignment;
 import com.liferay.training.gradebook.model.Submission;
@@ -84,6 +85,11 @@ public class SubmissionLocalServiceImpl extends SubmissionLocalServiceBaseImpl {
 
 		/***** [PLACEHOLDER FOR SUBMISSION VALIDATION] *****/
 		
+		validateSubmission(serviceContext.getCompanyId(), 
+				studentId, 
+				assignment, 
+				submissionText);
+		
 		// Create submission id.
 		
 		long submissionId =
@@ -130,6 +136,11 @@ public class SubmissionLocalServiceImpl extends SubmissionLocalServiceBaseImpl {
 						assignmentLocalService.getAssignment(submission.getAssignmentId());
 		
 		/***** [PLACEHOLDER FOR SUBMISSION VALIDATION] *****/
+		
+		validateSubmission(serviceContext.getCompanyId(), 
+				submission.getUserId(), 
+				assignment, 
+				submissionText);
 
 		submission.setSubmissionText(submissionText);
 		submission.setSubmitDate(new Date());
@@ -251,7 +262,7 @@ public class SubmissionLocalServiceImpl extends SubmissionLocalServiceBaseImpl {
 			errorMessages.add("error.submission-is-too-late");
 		}
 		
-/*
+
 		GradebookSystemServiceConfiguration _configuration =
 				_configurationProvider.getSystemConfiguration(
 						GradebookSystemServiceConfiguration.class);
@@ -291,7 +302,7 @@ public class SubmissionLocalServiceImpl extends SubmissionLocalServiceBaseImpl {
 			throw new SubmissionValidationException(errorMessages);
 		}
 		
-*/
+
 	}	
 
 	@ServiceReference(

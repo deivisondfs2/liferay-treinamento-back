@@ -1,0 +1,24 @@
+2018-10-26 11:44:45.418 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@5e75f0a6 (No operations allowed after connection closed.)
+2018-10-26 11:44:45.422 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@1f366046 (No operations allowed after connection closed.)
+2018-10-26 11:44:45.427 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@6eb753c6 (No operations allowed after connection closed.)
+2018-10-26 11:44:45.428 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@ed98a16 (No operations allowed after connection closed.)
+2018-10-26 11:44:45.429 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@7c6dd11a (No operations allowed after connection closed.)
+2018-10-26 11:44:45.432 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@50f5aa81 (No operations allowed after connection closed.)
+2018-10-26 11:44:45.434 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@408ea3a (No operations allowed after connection closed.)
+2018-10-26 11:44:45.435 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@46434997 (No operations allowed after connection closed.)
+2018-10-26 11:44:45.437 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@6af2dacc (No operations allowed after connection closed.)
+2018-10-26 11:44:45.439 WARN  [liferay/scheduler_dispatch-2][PoolBase:180] HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@36a139f4 (No operations allowed after connection closed.)
+2018-10-26 11:55:38.012 INFO  [main][PortletHotDeployListener:331] Unregistering portlets for jrs-286-portlet
+2018-10-26 11:55:38.989 INFO  [main][PortletHotDeployListener:360] 1 portlet for jrs-286-portlet was unregistered
+2018-10-26 11:55:39.173 INFO  [main][PluginPackageUtil:1001] Reading plugin package for jrs-286-portlet
+2018-10-26 11:55:40.277 INFO  [main][ThemeHotDeployListener:136] Unregistering themes for classic-theme
+2018-10-26 11:55:40.290 INFO  [main][ThemeHotDeployListener:170] 1 theme for classic-theme was unregistered
+2018-10-26 11:55:40.477 INFO  [main][PluginPackageUtil:1001] Reading plugin package for classic-theme
+2018-10-26 11:55:42.443 INFO  [main][ThemeHotDeployListener:136] Unregistering themes for admin-theme
+2018-10-26 11:55:42.444 INFO  [main][ThemeHotDeployListener:170] 1 theme for admin-theme was unregistered
+2018-10-26 11:55:42.446 INFO  [main][PluginPackageUtil:1001] Reading plugin package for admin-theme
+2018-10-26 11:55:42.658 INFO  [main][PortletHotDeployListener:331] Unregistering portlets for lcs-portlet
+2018-10-26 11:55:42.680 INFO  [main][PortletHotDeployListener:360] 1 portlet for lcs-portlet was unregistered
+2018-10-26 11:55:42.682 INFO  [main][HookHotDeployListener:581] Hook for lcs-portlet was unregistered
+2018-10-26 11:55:47.722 INFO  [main][PluginPackageUtil:1001] Reading plugin package for lcs-portlet
+2018-10-26 11:56:00.983 INFO  [main][CxfJaxrsBundleActivator:60] destroyed whiteboard from configuration: {default.application.base=/rest, default.web=false, felix.fileinstall.filename=file:/media/dfs2/8db50751-1bdc-42e7-a702-5af7636b2a17/liferay-workspace-training/training-workspace/bundles/osgi/configs/org.apache.aries.jax.rs.whiteboard.default.cfg, service.pid=org.apache.aries.jax.rs.whiteboard.default}

@@ -14,5 +14,9 @@ dependencies {
 	// Needed by the Clay tag library
 	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.clay", version: "1.0.6"
 	
+	compileOnly group: "com.liferay", name: "com.liferay.portal.configuration.metatype.api", version: "1.0.0"
+	
+	compileOnly group: "com.liferay", name: "com.liferay.asset.api", version: "1.0.1"
+	
 	compile project(":modules:gradebook:gradebook-api")
 }
